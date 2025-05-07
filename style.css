@@ -1,0 +1,123 @@
+/* Style général */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background: #0f0f0f;
+    color: white;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Centrage du contenu au milieu de la page */
+.container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding: 50px;
+}
+
+.logo {
+    width: 100px;
+    position: absolute;
+    top: 20px;
+    left: 50px;
+}
+
+.content {
+    max-width: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-left: 50px;
+    text-align: center;  /* Centrer les éléments de texte */
+}
+
+.content h1#big-days {
+    font-size: 80px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.content p {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.content h2 {
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+.content h2 span {
+    color: #eeeb56;
+}
+
+.launch-time {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.launch-time div {
+    text-align: center;
+}
+
+.launch-time p {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.launch-time span {
+    font-size: 14px;
+    color: #bbb;
+}
+
+button {
+    background: #ebe977;
+    color: rgb(2, 2, 2);
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #eaee10;
+}
+
+button img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Animation de la fusée */
+@keyframes rocketFly {
+    0% {
+        bottom: 0;
+        opacity: 1;
+    }
+    100% {
+        bottom: 100%;
+        opacity: 0;
+    }
+}
+
+.rocket {
+    width: 80px;
+    position: absolute;
+    right: 10%;
+    bottom: 0;
+    animation: rocketFly 5s linear infinite;
+}
